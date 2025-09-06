@@ -2,6 +2,7 @@
 # Train Digital – Projektidee
 
 Dies ist eine Visualisierung der Kernfeatures von **Train Digital** als digitaler Personal Trainer.
+# Übersicht Über unser Programm
 ```mermaid
 flowchart TD
     A[Startseite / Dashboard]
@@ -33,6 +34,57 @@ flowchart TD
     F --> F1[Benutzername, Ziele, Trainingshäufigkeit]
     F --> F2[Personalisierte Empfehlungen]
 ```
+# Schema : Backend-Aufbau (c#)
+```mermaid
+mindmap
+  root((Backend: C# / ASP.NET Core))
+    1. Datenmodelle definieren
+      Übungen
+        Name
+        Muskelgruppe
+        Beschreibung
+        Bild/Video
+      Trainingspläne
+        Programmname
+        Übungen
+        Dauer / Wiederholungen / Sätze
+        Ziel (Muskelaufbau, Abnehmen…)
+      Ernährungspläne
+        Mahlzeiten
+        Kalorien
+        Makronährstoffe (Proteine, Fette, Kohlenhydrate)
+      Benutzerprofile
+        Name
+        Gewicht / Größe / Alter
+        Trainingsziele
+        Fortschritt
+    2. Logik erstellen
+      Kalorienbedarf berechnen
+      Fortschritt analysieren
+      Trainingsplan generieren / anpassen
+    3. APIs erstellen (HTTP-Endpunkte)
+      Daten abrufen
+        Übungen
+        Trainingspläne
+        Ernährungspläne
+      Daten speichern / aktualisieren
+        Benutzerfortschritt
+        Neue Trainingspläne
+        Eingaben Kalorienrechner
+```
+# Arbeitsablauf für den Benutzer
+```mermaid
+flowchart TD
+    A["Benutzer öffnet die Webseite"] --> B["Frontend zeigt Dashboard / Startseite"]
+    B --> C["Benutzer gibt Daten ein (z. B. Gewicht, Ziel)"]
+    C --> D["JavaScript sendet Anfrage an Backend (C# API)"]
+    D --> E["Backend verarbeitet Daten (Berechnungen, Datenbankzugriff)"]
+    E --> F["Backend sendet Ergebnis zurück"]
+    F --> G["Frontend zeigt Ergebnis dem Benutzer an"]
+```
+
+
+
 
 
 
