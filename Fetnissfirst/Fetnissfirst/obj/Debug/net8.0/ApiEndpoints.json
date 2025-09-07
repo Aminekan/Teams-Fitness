@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "Fetnissfirst.Controllers.WeatherForecastController",
+    "Method": "GetCalories",
+    "RelativePath": "api/WeatherForecast/calories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weight",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "height",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "age",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "activityLevel",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetnissfirst.Controllers.WeatherForecastController",
+    "Method": "GetExercises",
+    "RelativePath": "api/WeatherForecast/exercises",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
