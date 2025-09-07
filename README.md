@@ -34,6 +34,35 @@ flowchart TD
     F --> F1[Benutzername, Ziele, Trainingshäufigkeit]
     F --> F2[Personalisierte Empfehlungen]
 ```
+# Überblick für frontend und backend
+```mermaid
+graph TD
+
+    %% Backend
+    subgraph Backend
+        A1[Datenmodelle definieren: Übungen, Trainingspläne, Ernährungspläne, Benutzerprofile]
+        A2[Logik erstellen: Kalorienbedarf, Fortschritt, Trainingsplan generieren/anpassen]
+        A3[APIs erstellen: Daten abrufen & speichern]
+    end
+
+    %% Frontend
+    subgraph Frontend
+        B1[Benutzeroberfläche: Dashboard, Übungsübersicht, Trainingsprogramme, Ernährungs- & Kalorienrechner, Fortschritts-Tracking]
+        B2[Interaktion & Datenfluss: Formulare, Buttons, JS sendet Anfragen, Ergebnisse anzeigen]
+    end
+
+    %% Datenbank
+    subgraph Database
+        C1[Trainings- und Ernährungsdaten speichern]
+        C2[Verbindung über Entity Framework Core]
+    end
+
+    %% Verbindungen
+    Frontend --> Backend
+    Backend --> Database
+```
+
+
 # Schema : Backend-Aufbau (c#)
 ```mermaid
 mindmap
